@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Mayank",
+    "age": "21",
+    "contact": "9273498234"
+  },
+  {
+    "name": "Kundan",
+    "age": "22",
+    "contact": "4975234593"
+  },
+  {
+    "name": "Ankit",
+    "age": "24",
+    "contact": "2912128126"
+  },
+  
+  {
+    "name": "Aditya",
+    "age": "20",
+    "contact": "9711651858"
+  },
+
+  {
+    "name": "Prabhjot",
+    "age": "23",
+    "contact": "8943752328"
+
+  }
+]

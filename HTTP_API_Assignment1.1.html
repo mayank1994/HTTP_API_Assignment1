@@ -1,0 +1,32 @@
+<html ng-app="FriendApp">
+  <head>
+  <!-- Write a http get function to read values from a json file and display the result in template-->
+    <meta charset="utf-8">
+    <title>HTTP_API_Assignment1.1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script>
+      var FriendApp = angular.module('FriendApp', []);
+      FriendApp.controller('FriendsCTR', function ($scope, $http){
+        $http.get('friends.json').success(function(data) {
+          $scope.friends = data;
+        });
+      });
+    </script>
+  </head>
+  <body ng-controller="FriendsCTR">
+	<h2>Reading and Fetching Json Values</h2><br>
+    <table class="table table-bordered table-hover">
+      <tr class="info">
+        <th>Name</th>
+		<th>Age</th>
+        <th>Contact Number</th>
+      </tr>
+      <tr ng-repeat="friend in friends" class="success">
+        <td>{{friend.name}}</td>
+	     	<td>{{friend.age}}</td>
+        <td>{{friend.contact}}</td>
+      </tr>
+    </table>
+  </body>
+</html>
